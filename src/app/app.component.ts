@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
@@ -14,7 +14,8 @@ export class AppComponent {
 
   model: any = {};
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   ask() {
 
@@ -33,10 +34,10 @@ export class AppComponent {
       'http://localhost:8443/wine/ask',
       {'wine-to-ask': wineToAsk},
       {headers: httpHeaders}
-    ).map(
+    ).subscribe(
       data => {
-        const response = JSON.parse(JSON.stringify(data['entity'], null, 4));
-        alert('To wino świetnie nadaje się jako: ' + response.puropse);
+        const response = JSON.parse(JSON.stringify(data, null, 4));
+        alert('To wino świetnie nadaje się jako: ' + response.purpose);
       }
     );
   }
