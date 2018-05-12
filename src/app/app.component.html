@@ -27,7 +27,8 @@
           <label for="wineOrigin">Kraj pochodzenia:</label>
           <input type="text" class="form-control" [(ngModel)]="model.wineOrigin" id="wineOrigin" name="wineOrigin"/>
         </div>
-        <input class="btn btn-outline-danger" type="button" value="Szukaj" (click)="ask()">
+        <input class="btn btn-danger" type="button" value="Klasyfikuj" (click)="ask()">
+        <input class="btn btn-outline-danger" type="button" value="Odświerz wiedzę" (click)="refreshKnowledge()">
       </form>
     </div>
     <div class="col">

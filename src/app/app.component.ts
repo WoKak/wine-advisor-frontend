@@ -41,6 +41,19 @@ export class AppComponent {
       }
     );
   }
+
+  refreshKnowledge() {
+
+    let httpHeaders = new HttpHeaders()
+      .set('Access-Control-Allow-Origin', 'http://localhost:4200');
+
+    this.http.get(
+      'http://localhost:8443/wine/refresh-base',
+      {headers: httpHeaders}
+    ).subscribe(
+      data => {}
+    );
+  }
 }
 
 class Wine {
