@@ -10,19 +10,27 @@
       </div>
       <div class="form-group">
         <label for="grapeVariety">Szczep winorośli:</label>
-        <input type="text" class="form-control" [(ngModel)]="model.grapeVariety" id="grapeVariety" name="grapeVariety"/>
+        <select class="form-control" [(ngModel)]="model.grapeVariety" id="grapeVariety" name="grapeVariety">
+          <option *ngFor="let strain of strains">{{strain}}</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="wineType">Rodzaj wina:</label>
-        <input type="text" class="form-control" [(ngModel)]="model.wineType" id="wineType" name="wineType"/>
+        <select class="form-control" [(ngModel)]="model.wineType" id="wineType" name="wineType">
+          <option *ngFor="let kind of kinds">{{kind}}</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="wineDryness">Wytrawność:</label>
-        <input type="text" class="form-control" [(ngModel)]="model.wineDryness" id="wineDryness" name="wineDryness"/>
+        <select class="form-control" [(ngModel)]="model.wineDryness" id="wineDryness" name="wineDryness">
+          <option *ngFor="let dryness of drynesses">{{dryness}}</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="wineOrigin">Kraj pochodzenia:</label>
-        <input type="text" class="form-control" [(ngModel)]="model.wineOrigin" id="wineOrigin" name="wineOrigin"/>
+        <select class="form-control" [(ngModel)]="model.wineOrigin" id="wineOrigin" name="wineOrigin">
+          <option *ngFor="let origin of origins">{{origin}}</option>
+        </select>
       </div>
       <input class="btn btn-danger" type="button" value="Klasyfikuj" (click)="ask()">
       <input class="btn btn-outline-danger" type="button" value="Odświerz wiedzę" (click)="refreshKnowledge()">
@@ -31,3 +39,4 @@
   <div class="col">
   </div>
 </div>
+

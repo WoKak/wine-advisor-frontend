@@ -14,7 +14,13 @@ export class BackendService {
 
     return this.http.post(
       'http://localhost:8443/wine/ask',
-      {'wine-to-ask': wineToAsk},
+      {
+        alcoholPercentage: wineToAsk.alcoholPercentage,
+        grapeVariety: wineToAsk.grapeVariety,
+        wineType: wineToAsk.wineType,
+        wineDryness:  wineToAsk.wineDryness,
+        wineOrigin: wineToAsk.wineOrigin
+      },
       {headers: httpHeaders}
     ).map(
       data => {
