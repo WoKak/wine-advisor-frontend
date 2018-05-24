@@ -47,8 +47,8 @@ export class WineFormComponent implements OnInit {
     );
 
     this.backendService.ask(wineToAsk).subscribe(
-      data => {
-        alert('Twoje wino najlepiej nadaje się jako: ' + data);
+      (data: string) => {
+        alert('Do tego wina najlepiej pasuje potrawa: ' + data.toLowerCase().replace('-', ' '));
       }
     );
   }
