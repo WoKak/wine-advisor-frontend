@@ -8,7 +8,8 @@ Frontend of application advising on wine purposes based on data provided by clie
 * Angular 5
 * HTML
 * CSS
-* Bootstrap
+* Bootstrap 4
+* ng-bootstrap
 * npm
 
 #### To run this app:
