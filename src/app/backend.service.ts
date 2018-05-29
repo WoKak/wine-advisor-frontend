@@ -1,11 +1,12 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Wine} from './wine';
 
 @Injectable()
 export class BackendService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   ask(wineToAsk: Wine) {
 
@@ -18,7 +19,7 @@ export class BackendService {
         alcoholPercentage: wineToAsk.alcoholPercentage,
         grapeVariety: wineToAsk.grapeVariety,
         wineType: wineToAsk.wineType,
-        wineDryness:  wineToAsk.wineDryness,
+        wineDryness: wineToAsk.wineDryness,
         wineOrigin: wineToAsk.wineOrigin
       },
       {headers: httpHeaders}
