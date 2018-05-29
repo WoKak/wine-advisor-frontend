@@ -1,4 +1,4 @@
-# WineAdvisorFrontend
+# WineAdvisor - frontend
 
 Frontend of application advising on wine purposes based on data provided by client
 
